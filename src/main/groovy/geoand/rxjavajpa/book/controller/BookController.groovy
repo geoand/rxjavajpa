@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.RestController
-import org.springframework.web.context.request.async.DeferredResult
+import rx.Observable as Observable
 
 /**
  * Created by gandrianakis on 22/12/2015.
@@ -29,7 +29,7 @@ class BookController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    DeferredResult<List<Book>> all() {
-        observableToDeferredResult.convert(bookService.findAll())
+    Observable<List<Book>> all() {
+        return bookService.findAll()
     }
 }
