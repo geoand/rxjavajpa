@@ -9,4 +9,4 @@ Sample Groovy application using RxJava and Spring Boot 1.3 with Spring Data JPA
 
 `./gradlew build`
 
-The fat-jar is now created in `build/libs/ratpack-data-jpa`
+The fat-jar is now created in `build/libs/rxjavajpa`
